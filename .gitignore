@@ -1,0 +1,8 @@
+.netlify/
+dist/
+.publish/
+.venv/
+.agent-data/
+.env
+__pycache__/
+.pytest_cache/
