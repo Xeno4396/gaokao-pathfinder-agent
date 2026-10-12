@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: gaokao-pathfinder-agent-api
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: AGENT_DATABASE_PATH
+        value: /tmp/gaokao-agent/agent.db
+      - key: AGENT_REQUEST_TIMEOUT
+        value: "20"

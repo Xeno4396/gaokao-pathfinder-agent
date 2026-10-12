@@ -45,7 +45,11 @@ app = FastAPI(
 )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:8000", "http://localhost:8000"],
+    allow_origins=[
+        "http://127.0.0.1:8000",
+        "http://localhost:8000",
+        "https://qxgaokao.netlify.app",
+    ],
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
 )

@@ -1,4 +1,5 @@
 .netlify/
+.netlify-dist/
 dist/
 .publish/
 .venv/

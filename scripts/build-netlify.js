@@ -2,12 +2,13 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
-const dist = path.join(root, ".publish");
+const dist = path.join(root, ".netlify-dist");
 
 fs.mkdirSync(dist, { recursive: true });
 
 for (const file of [
   "index.html",
+  "agent.html",
   "admission-scores-2025.html",
   "plans-2026.html",
   "plan-comparison-report.html",
@@ -22,4 +23,4 @@ for (const directory of ["assets", "data"]) {
   });
 }
 
-console.log("Static site copied to dist/");
+console.log("Static site copied to .netlify-dist/");

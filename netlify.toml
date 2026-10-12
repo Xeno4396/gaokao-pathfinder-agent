@@ -1,0 +1,9 @@
+[build]
+  command = "node scripts/build-netlify.js"
+  publish = ".netlify-dist"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://gaokao-pathfinder-agent-api.onrender.com/api/:splat"
+  status = 200
+  force = true
